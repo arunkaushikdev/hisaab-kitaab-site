@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hisaab Kitaab: private expense tracker and udhaar khata</title>
+  <meta name="description" content="Private expense tracker and udhaar khata for Android. No account, no internet, no tracking. Hindi and English.">
+  <meta name="theme-color" content="#0b5d4b">
+  <link rel="icon" type="image/png" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('hk-theme');
+        if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        if (t === 'dark') d.setAttribute('data-theme', 'dark');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-play="">
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24"><path d="M4 16V6a2 2 0 012-2h12a2 2 0 012 2v10M4 11h16M4 16h16v2H4z"/><circle cx="8" cy="20" r="1"/><circle cx="16" cy="20" r="1"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15zM6.5 17H20v5H6.5A2.5 2.5 0 014 19.5"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M21 12V7a2 2 0 00-2-2H5a2 2 0 000 4h16v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7"/><path d="M16 14h.01"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-wifioff" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01M2 2l20 20"/></symbol>
+  <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19M14.12 14.12a3 3 0 11-4.24-4.24M1 1l22 22"/></symbol>
+  <symbol id="i-userx" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M18 8l5 5M23 8l-5 5"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z" fill="currentColor"/></symbol>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Hisaab Kitaab"><img src="assets/icon-192.png" alt="" width="34" height="34"><span>Hisaab Kitaab</span></a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#khata" data-i18n="nav_khata">Khata</a>
+      <a href="#reminders" data-i18n="nav_rem">Reminders</a>
+      <a href="#privacy" data-i18n="nav_priv">Privacy</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    </nav>
+    <div class="tools">
+      <button class="pill" id="lang" type="button" aria-label="Language"><span id="langLabel">हिं</span></button>
+      <button class="pill" id="theme" type="button" aria-label="Theme"><svg class="ico sun"><use href="#i-sun"/></svg><svg class="ico moon"><use href="#i-moon"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="grid-bg"></div>
+  <div class="blob b1" data-par="0.04"></div>
+  <div class="blob b2" data-par="-0.03"></div>
+  <div class="blob b3" data-par="0.02"></div>
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow rv"><span class="dot"><svg class="ico"><use href="#i-check"/></svg></span><span data-i18n="eyebrow">Works fully offline on Android</span></span>
+      <h1 class="rv" style="--d:.08s"><span data-i18n="h1a">Your hisaab,</span><br><span class="hl"><span data-i18n="h1b">sorted.</span><svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 40 2, 90 18, 135 8 S 185 6, 197 11"/></svg></span></h1>
+      <p class="lead rv" style="--d:.16s" data-i18n="lead">Daily expenses and udhaar khata in one simple app. Everything stays on your phone. No account to create, no cloud to trust.</p>
+      <div class="cta rv" style="--d:.24s">
+        <a class="btn saffron" id="playBtn" href="#" aria-disabled="true"><svg class="ico"><use href="#i-play"/></svg><span id="playTxt" data-i18n="play_soon">Coming soon on Google Play</span></a>
+        <a class="btn ghost" href="#features"><span data-i18n="see">See what it does</span><svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="trust rv" style="--d:.32s">
+        <span><svg class="ico"><use href="#i-userx"/></svg><span data-i18n="tr1">No sign-up</span></span>
+        <span><svg class="ico"><use href="#i-wifioff"/></svg><span data-i18n="tr2">No internet needed</span></span>
+        <span><svg class="ico"><use href="#i-eyeoff"/></svg><span data-i18n="tr3">No tracking</span></span>
+      </div>
+    </div>
+
+    <div class="stage rv" style="--d:.2s">
+      <div class="phone-tilt" id="tilt">
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="app-top"><div><small data-i18n="p_hi">Good evening</small><b data-i18n="p_title">Hisaab Kitaab</b></div><span class="avatar">HK</span></div>
+            <div class="chips" id="chips"><span class="on" data-i18n="c_today">Today</span><span data-i18n="c_7">7 days</span><span data-i18n="c_month">Month</span><span data-i18n="c_custom">Custom</span></div>
+            <div class="bal">
+              <small data-i18n="p_spent">Spent this month</small>
+              <div class="bal-num"><span id="curSym">₹</span> <span id="heroSpent" data-to="18450">0</span></div>
+              <div class="bars" aria-hidden="true">
+                <i style="--h:40%;--i:0"></i><i style="--h:65%;--i:1"></i><i style="--h:30%;--i:2"></i><i style="--h:80%;--i:3"></i><i style="--h:55%;--i:4"></i><i style="--h:95%;--i:5"></i><i style="--h:45%;--i:6"></i><i style="--h:70%;--i:7"></i><i style="--h:35%;--i:8"></i><i style="--h:60%;--i:9"></i><i style="--h:85%;--i:10"></i><i style="--h:50%;--i:11"></i>
+              </div>
+            </div>
+            <div class="ks">
+              <div><small data-i18n="p_get">You'll get</small><b class="g">₹ 6,200</b></div>
+              <div><small data-i18n="p_owe">You owe</small><b class="r">₹ 1,500</b></div>
+            </div>
+            <ul class="txs" id="txs"></ul>
+            <div class="fab"><svg class="ico"><use href="#i-plus"/></svg></div>
+          </div>
+        </div>
+      </div>
+      <div class="float f1" data-par="-0.05"><span class="fi"><svg class="ico"><use href="#i-bell"/></svg></span><span><span data-i18n="f1a">Electricity bill</span><small data-i18n="f1b">Due tomorrow · ₹ 1,840</small></span></div>
+      <div class="float f2" data-par="0.05"><span class="fi"><svg class="ico"><use href="#i-check"/></svg></span><span><span data-i18n="f2a">Got ₹ 500 from Ramesh</span><small data-i18n="f2b">Balance updated</small></span></div>
+      <div class="float f3" data-par="-0.03"><span class="fi"><svg class="ico"><use href="#i-lock"/></svg></span><span><span data-i18n="f3a">Stored on this phone</span><small data-i18n="f3b">Nothing leaves it</small></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- currencies marquee -->
+<div class="marquee" aria-label="Currencies"><div class="track" id="track"></div></div>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="k_feat">Everything you need</span>
+      <h2 data-i18n-html="h_feat">Small app. <em>Big</em> everyday use.</h2>
+      <p data-i18n="p_feat">For the shop, the home budget and the friend who owes you for lunch.</p>
+    </div>
+
+    <div class="bento">
+      <article class="tile w5 rv">
+        <div class="t-ico"><svg class="ico"><use href="#i-plus"/></svg></div>
+        <h3 data-i18n="t1h">Add an entry in a few taps</h3>
+        <p data-i18n="t1p">Expense or income, with category, note, date and time. A speed-dial keeps the common actions under your thumb.</p>
+        <div class="mini m-type"><span class="tag s" data-i18n="t1a">Chai</span><span class="m-amt">₹ 40</span></div>
+      </article>
+
+      <article class="tile w7 rv" style="--d:.08s">
+        <div class="t-ico"><svg class="ico"><use href="#i-users"/></svg></div>
+        <h3 data-i18n="t2h">A khata for every person</h3>
+        <p data-i18n="t2p">See who owes you and whom you owe, with a running balance. Add "Gave" or "Got" right from the list.</p>
+        <div class="mini m-rows">
+          <div class="m-row"><span class="av" style="background:#e3eefb;color:#2a63a8">R</span><span data-i18n="n1">Ramesh</span><b style="color:var(--inc)">+ ₹ 1,500</b></div>
+          <div class="m-row"><span class="av" style="background:#fdf0da;color:#b26a00">S</span><span data-i18n="n2">Sunita</span><b style="color:var(--exp)">− ₹ 700</b></div>
+        </div>
+      </article>
+
+      <article class="tile w7 rv">
+        <div class="t-ico"><svg class="ico"><use href="#i-sliders"/></svg></div>
+        <h3 data-i18n="t3h">Filter Home your way</h3>
+        <p data-i18n="t3p">Today, last 7 days, this month, last month, or your own date range. Totals update with the chips.</p>
+        <div class="mini m-chips"><span style="--i:0" data-i18n="c_today">Today</span><span style="--i:1" data-i18n="c_7">7 days</span><span style="--i:2" data-i18n="c_month">Month</span><span style="--i:3" data-i18n="c_last">Last month</span></div>
+      </article>
+
+      <article class="tile w5 dark rv" style="--d:.08s">
+        <div class="t-ico"><svg class="ico"><use href="#i-file"/></svg></div>
+        <h3 data-i18n="t4h">Balance sheet PDF</h3>
+        <p data-i18n="t4p">For any person and any date range. Open it or share it.</p>
+        <div class="mini"><div class="m-paper"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><b>₹ 1,500</b></div></div>
+      </article>
+
+      <article class="tile rv">
+        <div class="t-ico"><svg class="ico"><use href="#i-repeat"/></svg></div>
+        <h3 data-i18n="t5h">Bills that repeat</h3>
+        <p data-i18n="t5p">Due dates and monthly repeat. Mark paid and it lands in expenses.</p>
+        <div class="mini m-spin" style="color:var(--green)"><svg class="ico"><use href="#i-repeat"/></svg></div>
+      </article>
+
+      <article class="tile rv" style="--d:.08s">
+        <div class="t-ico"><svg class="ico"><use href="#i-bell"/></svg></div>
+        <h3 data-i18n="t6h">Reminders that reach you</h3>
+        <p data-i18n="t6p">A ring, a vibration or a spoken message, as early as you choose.</p>
+        <div class="mini m-bell"><svg class="ico"><use href="#i-bell"/></svg></div>
+      </article>
+
+      <article class="tile rv" style="--d:.16s">
+        <div class="t-ico"><svg class="ico"><use href="#i-archive"/></svg></div>
+        <h3 data-i18n="t7h">Real backup file</h3>
+        <p data-i18n="t7p">Share it or save it to your phone, and restore any time.</p>
+        <div class="mini m-file"><svg class="ico"><use href="#i-download"/></svg><span>hisaab-kitaab-backup.json</span></div>
+      </article>
+
+      <article class="tile w6 rv">
+        <div class="t-ico"><svg class="ico"><use href="#i-globe"/></svg></div>
+        <h3 data-i18n="t8h">Any currency, or your own</h3>
+        <p data-i18n="t8p">Pick from a searchable list of 123 currencies, or add one that is missing. The symbol and number grouping change; amounts are never converted.</p>
+        <div class="mini m-sym"><span style="--i:0">₹</span><span style="--i:1">$</span><span style="--i:2">€</span><span style="--i:3">£</span><span style="--i:4">¥</span><span style="--i:5">৳</span><span style="--i:6">Rs</span></div>
+      </article>
+
+      <article class="tile w6 rv" style="--d:.08s">
+        <div class="t-ico"><svg class="ico"><use href="#i-sliders"/></svg></div>
+        <h3 data-i18n="t9h">Hindi or English, your words</h3>
+        <p data-i18n="t9p">Switch the whole app. Call it Khata or Ledger, and show Dr/Cr labels if you like them. Delete many entries or people at once.</p>
+        <div class="mini m-chips"><span style="--i:0">हिन्दी</span><span style="--i:1">English</span><span style="--i:2">Khata</span><span style="--i:3">Ledger</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- KHATA DEMO -->
+<section id="khata" style="padding-top:40px">
+  <div class="wrap demo">
+    <div class="demo-copy rv">
+      <span class="kicker" data-i18n="k_khata">Try it</span>
+      <h2 data-i18n-html="h_khata">Udhaar, <em>without</em> the diary.</h2>
+      <p style="margin-top:16px;color:var(--sub);font-size:18px" data-i18n="p_khata">Tap Gave or Got and watch the balance change. This is a small demo with sample data; the real app works the same way.</p>
+      <ul>
+        <li><svg class="ico"><use href="#i-check"/></svg><span><b data-i18n="d1h">One running balance</b><span data-i18n="d1p">Green when they owe you, red when you owe them.</span></span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span><b data-i18n="d2h">Every entry dated</b><span data-i18n="d2p">Nothing to remember, nothing to argue about.</span></span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span><b data-i18n="d3h">Send a PDF statement</b><span data-i18n="d3p">Share the balance sheet in one tap.</span></span></li>
+      </ul>
+    </div>
+
+    <div class="panel rv" style="--d:.1s">
+      <div class="p-head"><span class="av">R</span><div><small data-i18n="pd_khata">Khata</small><b data-i18n="n1">Ramesh</b></div><span class="p-badge" data-i18n="sample">Sample</span></div>
+      <div class="bigbal" id="bigbal"><small id="balLabel">Ramesh owes you</small><div class="num"><span id="balSym">₹</span> <span id="balNum">1,500</span></div></div>
+      <div class="controls">
+        <label class="amt"><span id="amtSym">₹</span><input id="amt" type="number" inputmode="numeric" min="1" max="9999999" value="500" aria-label="Amount"></label>
+        <div class="presets" id="presets"><button type="button" data-v="100">100</button><button type="button" data-v="500">500</button><button type="button" data-v="1000">1,000</button><button type="button" data-v="2500">2,500</button></div>
+        <div class="gg">
+          <button class="btn red" id="gave" type="button"><svg class="ico"><use href="#i-minus"/></svg><span data-i18n="gave">Gave</span></button>
+          <button class="btn grn" id="got" type="button"><svg class="ico"><use href="#i-plus"/></svg><span data-i18n="got">Got</span></button>
+        </div>
+      </div>
+      <ul class="ledger" id="ledger" aria-live="polite"></ul>
+      <button class="reset" id="reset" type="button" data-i18n="reset">Reset demo</button>
+    </div>
+  </div>
+</section>
+
+<!-- REMINDERS -->
+<section class="rem" id="reminders">
+  <div class="wrap demo">
+    <div class="rv">
+      <span class="kicker" data-i18n="k_rem">Bill reminders</span>
+      <h2 data-i18n-html="h_rem">Never miss a <em>due date</em> again.</h2>
+      <p style="margin-top:16px;color:var(--sub);font-size:18px" data-i18n="p_rem">Pick any mix of ring, vibrate and speak aloud, and how early to be told. Reminders are set on your phone and survive a restart.</p>
+      <div class="mode-chips" id="modes">
+        <button class="mode" type="button" data-m="ring" aria-pressed="true"><svg class="ico"><use href="#i-bell"/></svg><span data-i18n="m_ring">Ring</span></button>
+        <button class="mode" type="button" data-m="vib" aria-pressed="false"><svg class="ico"><use href="#i-phone"/></svg><span data-i18n="m_vib">Vibrate</span></button>
+        <button class="mode" type="button" data-m="speak" aria-pressed="false"><svg class="ico"><use href="#i-volume"/></svg><span data-i18n="m_speak">Speak aloud</span></button>
+      </div>
+      <div class="lead-label" data-i18n="lead_label">Remind me</div>
+      <div class="seg" id="leads">
+        <button type="button" data-n="0" aria-pressed="false" data-i18n="l0">Same day</button>
+        <button type="button" data-n="1" aria-pressed="true">1</button>
+        <button type="button" data-n="2" aria-pressed="false">2</button>
+        <button type="button" data-n="3" aria-pressed="false">3</button>
+        <button type="button" data-n="7" aria-pressed="false">7</button>
+      </div>
+      <div class="rem-note" id="remNote" aria-live="polite"></div>
+    </div>
+    <div class="rem-stage ring rv" id="remStage" style="--d:.1s">
+      <div class="bellbig"><svg class="ico"><use href="#i-bell"/></svg></div>
+      <div class="rings"><i></i><i></i><i></i></div>
+      <div class="rp"><div class="rp-in">
+        <div class="notif"><span class="ni"><svg class="ico"><use href="#i-bell"/></svg></span><span><b data-i18n="f1a">Electricity bill</b><span data-i18n="rn">Due tomorrow · ₹ 1,840</span></span></div>
+      </div></div>
+      <div class="wave"><u><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i></u><span data-i18n="say">"Electricity bill is due tomorrow"</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="priv" id="privacy">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="k_priv">Private by design</span>
+      <h2 data-i18n-html="h_priv">Your money talk stays <em>yours</em>.</h2>
+      <p data-i18n="p_priv">Hisaab Kitaab has no servers to send your data to. The release app does not even ask for internet access.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar rv"><svg class="ico"><use href="#i-userx"/></svg><h3 data-i18n="pl1h">No account</h3><p data-i18n="pl1p">Install and start. No sign-up, no login, no email.</p></div>
+      <div class="pillar rv" style="--d:.08s"><svg class="ico"><use href="#i-wifioff"/></svg><h3 data-i18n="pl2h">No internet permission</h3><p data-i18n="pl2p">It works offline because it never needs a network.</p></div>
+      <div class="pillar rv" style="--d:.16s"><svg class="ico"><use href="#i-eyeoff"/></svg><h3 data-i18n="pl3h">No tracking</h3><p data-i18n="pl3p">No analytics, no ads, nothing watching what you do.</p></div>
+    </div>
+    <div class="flow rv" aria-hidden="true">
+      <div class="node me"><svg class="ico"><use href="#i-phone"/></svg><small data-i18n="fl1">Your phone</small></div>
+      <div class="wire"><span class="x"><svg class="ico"><use href="#i-x"/></svg></span></div>
+      <div class="node"><svg class="ico"><use href="#i-cloud"/></svg><small data-i18n="fl2">Any server</small></div>
+    </div>
+    <p style="text-align:center;margin-top:70px"><a class="btn ghost" style="--bg:rgba(255,255,255,.1);--fg:#fff;border-color:rgba(255,255,255,.25)" href="privacy/"><svg class="ico"><use href="#i-shield"/></svg><span data-i18n="read_pp">Read the privacy policy</span></a></p>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="k_how">How it works</span>
+      <h2 data-i18n-html="h_how">Three steps. <em>No setup.</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3 data-i18n="s1h">Add</h3><p data-i18n="s1p">Log an expense, an income, or a person's udhaar. Under five seconds.</p></div>
+      <div class="step rv" style="--d:.08s"><h3 data-i18n="s2h">See</h3><p data-i18n="s2p">Home shows your totals for the range you pick. Each khata shows its balance.</p></div>
+      <div class="step rv" style="--d:.16s"><h3 data-i18n="s3h">Share</h3><p data-i18n="s3p">Send a PDF statement, or keep a backup file for a new phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker" data-i18n="k_faq">Questions</span>
+      <h2 data-i18n-html="h_faq">Good to <em>know</em>.</h2>
+    </div>
+    <div class="faq">
+      <details class="rv"><summary><span data-i18n="q1">Does it need internet?</span><svg class="ico"><use href="#i-chev"/></svg></summary><p data-i18n="a1">No. The app works fully offline and the release version does not request internet access.</p></details>
+      <details class="rv"><summary><span data-i18n="q2">Where is my data stored?</span><svg class="ico"><use href="#i-chev"/></svg></summary><p data-i18n="a2">In a database on your phone. There is no account and no server, so we never see it.</p></details>
+      <details class="rv"><summary><span data-i18n="q3">How do I move to a new phone?</span><svg class="ico"><use href="#i-chev"/></svg></summary><p data-i18n="a3">Make a backup file from the More tab, send it to yourself, and restore it on the new phone.</p></details>
+      <details class="rv"><summary><span data-i18n="q4">Does it convert currencies?</span><svg class="ico"><use href="#i-chev"/></svg></summary><p data-i18n="a4">No. The currency you choose changes the symbol and how numbers are grouped. Amounts are never converted.</p></details>
+      <details class="rv"><summary><span data-i18n="q5">Is there an iPhone version?</span><svg class="ico"><use href="#i-chev"/></svg></summary><p data-i18n="a5">Not at the moment. Hisaab Kitaab is built for Android.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final">
+  <div class="wrap">
+    <div class="final-card rv">
+      <img src="assets/icon-192.png" alt="Hisaab Kitaab app icon" width="84" height="84">
+      <h2 data-i18n="fin_h">Apna hisaab, apne phone mein.</h2>
+      <p data-i18n="fin_p">Simple, fast and private. Made for everyday use.</p>
+      <div class="cta"><a class="btn saffron" id="playBtn2" href="#" aria-disabled="true"><svg class="ico"><use href="#i-play"/></svg><span id="playTxt2" data-i18n="play_soon">Coming soon on Google Play</span></a></div>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Hisaab Kitaab</span>
+    <nav aria-label="Footer"><a href="privacy/" data-i18n="nav_priv_full">Privacy policy</a><a href="#top" data-i18n="top">Back to top</a></nav>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
