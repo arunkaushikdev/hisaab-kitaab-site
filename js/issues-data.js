@@ -12,8 +12,8 @@ window.HK_ISSUES = {
       status: { en: 'Next update', hi: 'अगला अपडेट' },
       date: { en: 'Coming soon', hi: 'जल्द आ रहा है' },
       note: {
-        en: 'Reported by our first tester and already fixed in the code. Reaches you with the next update.',
-        hi: 'हमारे पहले टेस्टर ने बताया और कोड में ठीक हो चुका है। अगले अपडेट के साथ आप तक पहुँचेगा।'
+        en: 'Version 1.0.2. Reported by our testers and already fixed in the code, plus a few new things. Reaches you with the next update.',
+        hi: 'वर्ज़न 1.0.2। हमारे टेस्टरों ने बताया और कोड में ठीक हो चुका है, साथ में कुछ नई चीज़ें भी। अगले अपडेट के साथ आप तक पहुँचेगा।'
       },
       items: [
         { id: 'g1', tag: 'fixed', area: 'Khata',
@@ -60,6 +60,18 @@ window.HK_ISSUES = {
           t: { en: 'Opening balance was not first on the balance sheet', hi: 'ओपनिंग बैलेंस बैलेंस शीट में सबसे पहले नहीं था' },
           before: { en: 'The opening balance was sorted by the day it was typed in, so older entries could appear above it.', hi: 'ओपनिंग बैलेंस उसी दिन के हिसाब से लगता था जब वह डाला गया, इसलिए पुरानी एंट्रियाँ उसके ऊपर आ सकती थीं।' },
           now: { en: 'The opening balance is marked and always listed first, dated like the earliest entry.', hi: 'ओपनिंग बैलेंस पर निशान लगता है और वह हमेशा सबसे पहले आता है, सबसे पुरानी एंट्री की तारीख़ के साथ।' } }
+        ,{ id: 'g12', tag: 'fixed', area: 'Khata',
+          t: { en: 'Entries showed "Today" instead of the date', hi: 'एंट्री में तारीख़ की जगह "आज" दिखता था' },
+          before: { en: 'Entry cards on a person page said Today or a number of days ago, so the exact date was hidden.', hi: 'व्यक्ति के पेज पर एंट्री कार्ड में आज या कितने दिन पहले लिखा आता था, असली तारीख़ छिपी रहती थी।' },
+          now: { en: 'Every entry shows its exact date and time.', hi: 'हर एंट्री पर उसकी असली तारीख़ और समय दिखता है।' } }
+        ,{ id: 'g13', tag: 'improved', area: 'Khata',
+          t: { en: 'Person page summary', hi: 'व्यक्ति के पेज का सारांश' },
+          before: { en: 'Balance, Cr and Dr sat in three separate tiles that took a lot of space and were hard to read.', hi: 'बैलेंस, Cr और Dr तीन अलग टाइलों में थे, जगह बहुत लेते थे और पढ़ना मुश्किल था।' },
+          now: { en: 'One compact card with Balance (Cr, Dr or settled), total Cr and total Dr, like the Khata list. The filter, download and delete buttons sit in one row.', hi: 'एक कॉम्पैक्ट कार्ड में बैलेंस (Cr, Dr या सेटल्ड), कुल Cr और कुल Dr, खाता सूची जैसा। फ़िल्टर, डाउनलोड और डिलीट बटन एक ही लाइन में हैं।' } }
+        ,{ id: 'g14', tag: 'improved', area: 'Khata',
+          t: { en: 'Dull empty states and unclear buttons', hi: 'फीके खाली पेज और अस्पष्ट बटन' },
+          before: { en: 'An empty person page looked dead, the search box did not say what it could do, and the download button did not say what it downloaded.', hi: 'खाली पेज बेजान लगता था, सर्च बॉक्स बताता नहीं था कि क्या खोज सकते हैं, और डाउनलोड बटन बताता नहीं था कि क्या डाउनलोड होगा।' },
+          now: { en: 'A gently animated empty page, a search box that cycles through hints, and a labelled Balance sheet button.', hi: 'हल्का एनिमेटेड खाली पेज, हिंट बदलता सर्च बॉक्स, और नाम वाला बैलेंस शीट बटन।' } }
       ]
     },
     {
