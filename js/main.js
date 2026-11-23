@@ -16,7 +16,7 @@
   /* ---------- text ---------- */
   var T = {
     en: {
-      nav_features: 'Features', nav_khata: 'Khata', nav_rem: 'Reminders', nav_priv: 'Privacy', nav_faq: 'FAQ',
+      nav_features: 'Features', nav_khata: 'Khata', nav_rem: 'Reminders', nav_priv: 'Privacy', nav_faq: 'FAQ', nav_issues: 'Issues',
       eyebrow: 'Works fully offline on Android',
       h1a: 'Your hisaab,', h1b: 'sorted.',
       lead: 'Daily expenses and udhaar khata in one simple app. Everything stays on your phone. No account to create, no cloud to trust.',
@@ -83,7 +83,7 @@
       foot_blurb: 'Private expense tracker and udhaar khata for Android. No account, no internet, no tracking.', foot_explore: 'Explore', foot_legal: 'Legal'
     },
     hi: {
-      nav_features: 'खूबियाँ', nav_khata: 'खाता', nav_rem: 'रिमाइंडर', nav_priv: 'प्राइवेसी', nav_faq: 'सवाल',
+      nav_features: 'खूबियाँ', nav_khata: 'खाता', nav_rem: 'रिमाइंडर', nav_priv: 'प्राइवेसी', nav_faq: 'सवाल', nav_issues: 'इश्यू',
       eyebrow: 'Android पर पूरी तरह ऑफ़लाइन',
       h1a: 'आपका हिसाब,', h1b: 'एकदम सही।',
       lead: 'रोज़ के खर्च और उधार खाता, एक आसान ऐप में। सब कुछ आपके फ़ोन में रहता है। न अकाउंट बनाना, न किसी क्लाउड पर भरोसा।',
