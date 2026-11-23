@@ -44,6 +44,10 @@ window.HK_ISSUES = {
           t: { en: 'Khata list was crowded', hi: 'खाता सूची भरी-भरी लगती थी' },
           before: { en: 'Tall total tiles, a subtitle that wrapped onto two lines and big quick buttons squeezed long names.', hi: 'ऊँची टोटल टाइलें, दो लाइन में टूटता सबटाइटल और बड़े क्विक बटन लंबे नामों को दबा देते थे।' },
           now: { en: 'Compact tiles, a one-line subtitle, smaller quick buttons, and the balance sheet button moved up beside the title.', hi: 'कॉम्पैक्ट टाइलें, एक लाइन का सबटाइटल, छोटे क्विक बटन, और बैलेंस शीट बटन ऊपर टाइटल के पास।' } }
+        ,{ id: 'g8', tag: 'new', area: 'More',
+          t: { en: 'No way to know about app updates', hi: 'ऐप अपडेट का पता चलने का कोई तरीका नहीं था' },
+          before: { en: 'A new version could be live on Google Play and nothing in the app would tell you.', hi: 'Google Play पर नया वर्ज़न आ जाता था और ऐप में कुछ पता नहीं चलता था।' },
+          now: { en: 'More has a "Check for update" card, and Home shows an Update banner by itself when a newer version is ready. It uses Google Play, so the app still needs no internet permission.', hi: 'More में "अपडेट देखें" कार्ड है, और नया वर्ज़न तैयार होने पर Home पर अपने-आप Update बैनर दिखता है। यह Google Play से चलता है, इसलिए ऐप को अब भी इंटरनेट अनुमति नहीं चाहिए।' } }
       ]
     },
     {
