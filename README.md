@@ -11,7 +11,7 @@ Landing page and privacy policy for the Hisaab Kitaab Android app. Plain HTML, C
 
 ## Things to fill in
 
-- `privacy/index.html`: replace `[add your contact email here before publishing]` with your email.
+- `privacy/index.html` and `terms/index.html`: replace `[add your contact email here before publishing]` with your email.
 - `index.html`: when the app is live on Google Play, put its store URL in `<body data-play="">`. Both buttons then switch from "Coming soon" to "Get it on Google Play".
 
 ## Notes
