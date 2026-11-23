@@ -48,6 +48,10 @@ window.HK_ISSUES = {
           t: { en: 'No way to know about app updates', hi: 'ऐप अपडेट का पता चलने का कोई तरीका नहीं था' },
           before: { en: 'A new version could be live on Google Play and nothing in the app would tell you.', hi: 'Google Play पर नया वर्ज़न आ जाता था और ऐप में कुछ पता नहीं चलता था।' },
           now: { en: 'More has a "Check for update" card, and Home shows an Update banner by itself when a newer version is ready. It uses Google Play, so the app still needs no internet permission.', hi: 'More में "अपडेट देखें" कार्ड है, और नया वर्ज़न तैयार होने पर Home पर अपने-आप Update बैनर दिखता है। यह Google Play से चलता है, इसलिए ऐप को अब भी इंटरनेट अनुमति नहीं चाहिए।' } }
+        ,{ id: 'g9', tag: 'fixed', area: 'Khata',
+          t: { en: 'Balance sheet had no address', hi: 'बैलेंस शीट में पता नहीं था' },
+          before: { en: 'A khata only kept a name and phone number, so the balance sheet could not show where the person lives or works.', hi: 'खाते में सिर्फ़ नाम और फ़ोन नंबर रहता था, इसलिए बैलेंस शीट पर व्यक्ति का पता नहीं दिखता था।' },
+          now: { en: 'New khata and Edit now have an optional Address field. It shows on the person page and under the name on the balance sheet PDF.', hi: 'नया खाता और Edit में अब वैकल्पिक पता भरने की जगह है। यह व्यक्ति के पेज पर और बैलेंस शीट PDF में नाम के नीचे दिखता है।' } }
       ]
     },
     {
