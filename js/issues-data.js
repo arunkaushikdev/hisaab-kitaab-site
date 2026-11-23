@@ -55,7 +55,7 @@ window.HK_ISSUES = {
         ,{ id: 'g10', tag: 'fixed', area: 'Khata',
           t: { en: 'Balance sheet could only be exported', hi: 'बैलेंस शीट सिर्फ़ एक्सपोर्ट हो सकती थी' },
           before: { en: 'The only choice was to make a PDF and open it in another app, with no way to just look at the sheet in Hisaab Kitaab.', hi: 'सिर्फ़ PDF बनाकर दूसरे ऐप में खोलने का रास्ता था, हिसाब किताब के अंदर शीट देखने का कोई तरीका नहीं था।' },
-          now: { en: 'View balance sheet opens it inside the app, with the address, Dr and Cr columns and the closing balance. Download PDF and Share are right there when you need the file.', hi: 'बैलेंस शीट देखें दबाने पर वह ऐप के अंदर खुलती है, पते, Dr और Cr कॉलम और क्लोज़िंग बैलेंस के साथ। फ़ाइल चाहिए तो PDF डाउनलोड और Share वहीं हैं।' } }
+          now: { en: 'View balance sheet opens it inside the app, with the address, Dr and Cr columns and the closing balance. Print, Share and Download PDF float at the bottom left when you need the file.', hi: 'बैलेंस शीट देखें दबाने पर वह ऐप के अंदर खुलती है, पते, Dr और Cr कॉलम और क्लोज़िंग बैलेंस के साथ। फ़ाइल चाहिए तो प्रिंट, Share और PDF डाउनलोड नीचे बाईं ओर तैरते बटन में हैं।' } }
       ]
     },
     {
