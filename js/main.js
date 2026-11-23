@@ -19,7 +19,7 @@
       eyebrow: 'Works fully offline on Android',
       h1a: 'Your hisaab,', h1b: 'sorted.',
       lead: 'Daily expenses and udhaar khata in one simple app. Everything stays on your phone. No account to create, no cloud to trust.',
-      play_soon: 'Coming soon on Google Play', play_get: 'Get it on Google Play',
+      play_get: 'Get it on Google Play',
       see: 'See what it does',
       tr1: 'No sign-up', tr2: 'No internet needed', tr3: 'No tracking',
       p_hi: 'Good evening', p_title: 'Hisaab Kitaab', p_spent: 'Spent this month', p_get: "You'll get", p_owe: 'You owe',
@@ -86,7 +86,7 @@
       eyebrow: 'Android पर पूरी तरह ऑफ़लाइन',
       h1a: 'आपका हिसाब,', h1b: 'एकदम सही।',
       lead: 'रोज़ के खर्च और उधार खाता, एक आसान ऐप में। सब कुछ आपके फ़ोन में रहता है। न अकाउंट बनाना, न किसी क्लाउड पर भरोसा।',
-      play_soon: 'जल्द ही Google Play पर', play_get: 'Google Play से पाएँ',
+      play_get: 'Google Play से पाएँ',
       see: 'देखें यह क्या करता है',
       tr1: 'कोई साइन-अप नहीं', tr2: 'इंटरनेट नहीं चाहिए', tr3: 'कोई ट्रैकिंग नहीं',
       p_hi: 'शुभ संध्या', p_title: 'हिसाब किताब', p_spent: 'इस महीने खर्च', p_get: 'मिलेंगे', p_owe: 'देने हैं',
@@ -193,7 +193,6 @@
       if (!a || !s) return;
       if (PLAY_URL) {
         a.href = PLAY_URL; a.target = '_blank'; a.rel = 'noopener'; a.removeAttribute('aria-disabled');
-        s.setAttribute('data-i18n', 'play_get');
       } else {
         a.addEventListener('click', function (e) { e.preventDefault(); });
       }
