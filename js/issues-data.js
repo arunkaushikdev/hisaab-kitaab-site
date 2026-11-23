@@ -40,6 +40,10 @@ window.HK_ISSUES = {
           t: { en: 'Opening balance when creating a khata', hi: 'खाता बनाते समय शुरुआती बैलेंस' },
           before: { en: 'A new khata always started at zero, so an old udhaar had to be added as a separate entry by hand.', hi: 'नया खाता हमेशा शून्य से शुरू होता था, पुराना उधार अलग से एंट्री बनाकर जोड़ना पड़ता था।' },
           now: { en: 'Add an optional opening amount with You gave or You got. It becomes the first entry, which you can edit later.', hi: 'वैकल्पिक शुरुआती रक़म जोड़ें, आपने दिए या आपने लिए के साथ। वह पहली एंट्री बन जाती है, जिसे बाद में बदला जा सकता है।' } }
+        ,{ id: 'g7', tag: 'fixed', area: 'Khata',
+          t: { en: 'Khata list was crowded', hi: 'खाता सूची भरी-भरी लगती थी' },
+          before: { en: 'Tall total tiles, a subtitle that wrapped onto two lines and big quick buttons squeezed long names.', hi: 'ऊँची टोटल टाइलें, दो लाइन में टूटता सबटाइटल और बड़े क्विक बटन लंबे नामों को दबा देते थे।' },
+          now: { en: 'Compact tiles, a one-line subtitle, smaller quick buttons, and the balance sheet button moved up beside the title.', hi: 'कॉम्पैक्ट टाइलें, एक लाइन का सबटाइटल, छोटे क्विक बटन, और बैलेंस शीट बटन ऊपर टाइटल के पास।' } }
       ]
     },
     {
