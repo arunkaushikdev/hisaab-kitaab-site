@@ -476,3 +476,7 @@ footer:not(.site-foot) { border-top: 1px solid var(--line); padding: 34px 0 44px
 .foot { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; justify-content: space-between; }
 .foot nav { display: flex; gap: 22px; font-weight: 700; }
 .foot nav a:hover { color: var(--green); }
+
+.soon-note a { text-decoration: underline; text-underline-offset: 3px; font-weight: 700; color: var(--green); }
+.final-card .soon-note { color: var(--gtext); margin: 14px 0 0; font-size: 14px; }
+.final-card .soon-note a { color: #fff; }
