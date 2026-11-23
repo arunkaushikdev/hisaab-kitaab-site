@@ -317,10 +317,11 @@
 
 <!-- FAQ -->
 <section id="faq" style="padding-top:20px">
-  <div class="wrap">
-    <div class="sec-head rv">
+  <div class="wrap faq-grid">
+    <div class="sec-head rv faq-head">
       <span class="kicker" data-i18n="k_faq">Questions</span>
       <h2 data-i18n-html="h_faq">Good to <em>know</em>.</h2>
+      <p data-i18n="faq_p">Short answers to what people ask first.</p>
     </div>
     <div class="faq">
       <details class="rv"><summary><span data-i18n="q1">Does it need internet?</span><svg class="ico"><use href="#i-chev"/></svg></summary><p data-i18n="a1">No. The app works fully offline and the release version does not request internet access.</p></details>
@@ -336,19 +337,46 @@
 <div class="final">
   <div class="wrap">
     <div class="final-card rv">
-      <img src="assets/icon-192.png" alt="Hisaab Kitaab app icon" width="84" height="84">
-      <h2 data-i18n="fin_h">Apna hisaab, apne phone mein.</h2>
-      <p data-i18n="fin_p">Simple, fast and private. Made for everyday use.</p>
-      <div class="cta"><a class="btn saffron" id="playBtn2" href="#" aria-disabled="true"><svg class="ico"><use href="#i-play"/></svg><span id="playTxt2" data-i18n="play_soon">Coming soon on Google Play</span></a></div>
+      <div class="fc-copy">
+        <span class="kicker" data-i18n="fin_k">Ready when you are</span>
+        <h2 data-i18n="fin_h">Apna hisaab, apne phone mein.</h2>
+        <p data-i18n="fin_p">Simple, fast and private. Made for everyday use.</p>
+        <div class="cta"><a class="btn saffron" id="playBtn2" href="#" aria-disabled="true"><svg class="ico"><use href="#i-play"/></svg><span id="playTxt2" data-i18n="play_soon">Coming soon on Google Play</span></a></div>
+      </div>
+      <div class="fc-art" aria-hidden="true">
+        <i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i>
+        <img src="assets/icon-192.png" alt="" width="120" height="120">
+        <span class="orb o1">₹</span><span class="orb o2">$</span><span class="orb o3">€</span><span class="orb o4">£</span>
+      </div>
     </div>
   </div>
 </div>
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <span>© 2026 Hisaab Kitaab</span>
-    <nav aria-label="Footer"><a href="privacy/" data-i18n="nav_priv_full">Privacy policy</a><a href="#top" data-i18n="top">Back to top</a></nav>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="#top"><img src="assets/icon-192.png" alt="" width="34" height="34"><span>Hisaab Kitaab</span></a>
+        <p data-i18n="foot_blurb">Private expense tracker and udhaar khata for Android. No account, no internet, no tracking.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Footer">
+        <div>
+          <b data-i18n="foot_explore">Explore</b>
+          <a href="#features" data-i18n="nav_features">Features</a>
+          <a href="#khata" data-i18n="nav_khata">Khata</a>
+          <a href="#reminders" data-i18n="nav_rem">Reminders</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        </div>
+        <div>
+          <b data-i18n="foot_legal">Legal</b>
+          <a href="privacy/" data-i18n="nav_priv_full">Privacy policy</a>
+          <a href="#privacy" data-i18n="nav_priv">Privacy</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-word" aria-hidden="true">Hisaab Kitaab</div>
+    <div class="foot-bot"><span>© 2026 Hisaab Kitaab</span><a href="#top" data-i18n="top">Back to top</a></div>
   </div>
 </footer>
 

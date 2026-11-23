@@ -77,7 +77,9 @@
       q4: 'Does it convert currencies?', a4: 'No. The currency you choose changes the symbol and how numbers are grouped. Amounts are never converted.',
       q5: 'Is there an iPhone version?', a5: 'Not at the moment. Hisaab Kitaab is built for Android.',
       fin_h: 'Apna hisaab, apne phone mein.', fin_p: 'Simple, fast and private. Made for everyday use.',
-      nav_priv_full: 'Privacy policy', top: 'Back to top'
+      nav_priv_full: 'Privacy policy', top: 'Back to top',
+      faq_p: 'Short answers to what people ask first.', fin_k: 'Ready when you are',
+      foot_blurb: 'Private expense tracker and udhaar khata for Android. No account, no internet, no tracking.', foot_explore: 'Explore', foot_legal: 'Legal'
     },
     hi: {
       nav_features: 'खूबियाँ', nav_khata: 'खाता', nav_rem: 'रिमाइंडर', nav_priv: 'प्राइवेसी', nav_faq: 'सवाल',
@@ -142,7 +144,9 @@
       q4: 'क्या यह मुद्रा बदलता है?', a4: 'नहीं। चुनी हुई मुद्रा सिर्फ़ चिह्न और अंकों का ढंग बदलती है। रकम का रूपांतरण कभी नहीं होता।',
       q5: 'क्या iPhone वर्शन है?', a5: 'अभी नहीं। हिसाब किताब Android के लिए बना है।',
       fin_h: 'अपना हिसाब, अपने फ़ोन में।', fin_p: 'आसान, तेज़ और निजी। रोज़ के इस्तेमाल के लिए।',
-      nav_priv_full: 'प्राइवेसी पॉलिसी', top: 'ऊपर जाएँ'
+      nav_priv_full: 'प्राइवेसी पॉलिसी', top: 'ऊपर जाएँ',
+      faq_p: 'लोग सबसे पहले जो पूछते हैं, उसके छोटे जवाब।', fin_k: 'जब आप तैयार हों',
+      foot_blurb: 'Android के लिए निजी खर्च ट्रैकर और उधार खाता। कोई अकाउंट नहीं, इंटरनेट नहीं, ट्रैकिंग नहीं।', foot_explore: 'देखें', foot_legal: 'क़ानूनी'
     }
   };
 
