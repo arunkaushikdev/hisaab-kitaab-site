@@ -711,3 +711,7 @@ footer:not(.site-foot) { border-top: 1px solid var(--line); padding: 34px 0 44px
 [data-lang="hi"] .iss-ba > div, [data-lang="hi"] .iss-work, [data-lang="hi"] .iss-up p, [data-lang="hi"] .iss-steps li { font-size: 15.5px; line-height: 1.6; }
 [data-lang="hi"] .iss-card h3, [data-lang="hi"] .iss-up h3 { line-height: 1.4; }
 [data-lang="hi"] .iss-ba > div { grid-template-columns: 56px 1fr; }
+
+.iss-chip.soon { background: #fdf0d8; border-color: transparent; color: #b9740b; }
+.iss-chip.soon i { width: 8px; height: 8px; border-radius: 50%; background: var(--saffron); }
+:root[data-theme="dark"] .iss-chip.soon { background: #3a2c12; color: #f2b45a; }

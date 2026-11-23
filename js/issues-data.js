@@ -7,6 +7,38 @@ window.HK_ISSUES = {
   /* Fixed and improved. tag: fixed | improved | hardened */
   releases: [
     {
+      v: '1.0.2',
+      next: true,
+      status: { en: 'Next update', hi: 'अगला अपडेट' },
+      date: { en: 'Coming soon', hi: 'जल्द आ रहा है' },
+      note: {
+        en: 'Reported by our first tester and already fixed in the code. Reaches you with the next update.',
+        hi: 'हमारे पहले टेस्टर ने बताया और कोड में ठीक हो चुका है। अगले अपडेट के साथ आप तक पहुँचेगा।'
+      },
+      items: [
+        { id: 'g1', tag: 'fixed', area: 'Khata',
+          t: { en: 'Dr / Cr colours disagreed on one screen', hi: 'एक ही स्क्रीन पर Dr / Cr के रंग आपस में उलझे थे' },
+          before: { en: 'With Dr / Cr words on, Cr was green on the totals tile but red on the balance line.', hi: 'Dr / Cr शब्द चालू होने पर Cr टोटल टाइल में हरा था पर बैलेंस लाइन में लाल।' },
+          now: { en: 'The word now decides the colour everywhere: Dr is green, Cr is red.', hi: 'अब शब्द ही हर जगह रंग तय करता है: Dr हरा, Cr लाल।' } },
+        { id: 'g2', tag: 'fixed', area: 'Khata',
+          t: { en: 'Entries ran together in one block', hi: 'एंट्री एक ही ब्लॉक में चिपकी दिखती थीं' },
+          before: { en: "A person's entries sat in a single card with a faint divider.", hi: 'किसी व्यक्ति की एंट्री एक ही कार्ड में हल्की लाइन के साथ थीं।' },
+          now: { en: 'Every entry is its own card with a clear gap between them.', hi: 'हर एंट्री का अपना कार्ड है और दोनों के बीच साफ़ जगह है।' } },
+        { id: 'g3', tag: 'improved', area: 'Entries',
+          t: { en: 'Change an entry from Dr to Cr and back', hi: 'एंट्री का प्रकार Dr से Cr (और वापस) बदलें' },
+          before: { en: 'To fix a wrong type you had to delete the entry and add it again.', hi: 'ग़लत प्रकार ठीक करने के लिए एंट्री डिलीट करके दोबारा जोड़नी पड़ती थी।' },
+          now: { en: 'Open the entry and switch the type right there, then save.', hi: 'एंट्री खोलें, वहीं प्रकार बदलें और सेव करें।' } },
+        { id: 'g4', tag: 'improved', area: 'Khata',
+          t: { en: "Edit a person's name and phone", hi: 'व्यक्ति का नाम और फ़ोन बदलें' },
+          before: { en: 'Details could not be changed after the khata was created.', hi: 'खाता बनने के बाद विवरण बदले नहीं जा सकते थे।' },
+          now: { en: "Tap Edit on the person's page, or long-press a person in the list and tap Edit.", hi: 'व्यक्ति के पेज पर बदलें दबाएँ, या सूची में उसे दबाए रखकर बदलें दबाएँ।' } },
+        { id: 'g5', tag: 'improved', area: 'Khata',
+          t: { en: "Date filters on a person's page", hi: 'व्यक्ति के पेज पर तारीख़ फ़िल्टर' },
+          before: { en: 'Every entry was always shown, with no way to narrow by date.', hi: 'हमेशा सारी एंट्री दिखती थीं, तारीख़ से छाँटने का तरीक़ा नहीं था।' },
+          now: { en: 'Pick All time, This month, Last month, Last 7 days, Today or a custom range. Totals follow the filter; the balance stays the full amount.', hi: 'सारा समय, इस महीने, पिछला महीना, 7 दिन, आज या कस्टम अवधि चुनें। टोटल फ़िल्टर के साथ बदलते हैं, बैलेंस पूरा ही रहता है।' } }
+      ]
+    },
+    {
       v: '1.0.1',
       status: { en: 'Closed testing', hi: 'क्लोज़्ड टेस्टिंग' },
       date: '23 Nov 2026',

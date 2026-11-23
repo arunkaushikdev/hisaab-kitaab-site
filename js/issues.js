@@ -19,7 +19,7 @@
       s_fixed: 'Fixed and improved', s_hot: 'Hotfixes shipped', s_known: 'Known issues', s_up: 'On the roadmap',
       tab_all: 'All', tab_fixed: 'Fixed', tab_hot: 'Hotfixes', tab_known: 'Known', tab_up: 'Upcoming',
       search: 'Search issues',
-      h_fixed: 'Fixed and improved', d_fixed: 'Every fix and polish that already made it into the app.',
+      h_fixed: 'Fixed and improved', d_fixed: 'Every fix and polish, live now or on its way in the next update.',
       h_hot: 'Hotfixes', d_hot: 'Urgent fixes we ship outside the normal update cycle.',
       h_known: 'Known issues', d_known: 'Things we know are rough, with a way around them where there is one.',
       h_up: 'Upcoming', d_up: 'Where the app is heading. No dates are promised, the order can change.',
@@ -46,7 +46,7 @@
       s_fixed: 'ठीक और बेहतर', s_hot: 'हॉटफ़िक्स जारी', s_known: 'ज्ञात समस्याएँ', s_up: 'रोडमैप में',
       tab_all: 'सब', tab_fixed: 'ठीक हुआ', tab_hot: 'हॉटफ़िक्स', tab_known: 'ज्ञात', tab_up: 'आने वाला',
       search: 'इश्यू खोजें',
-      h_fixed: 'ठीक और बेहतर हुआ', d_fixed: 'जो भी फ़िक्स और सुधार ऐप में पहुँच चुके हैं।',
+      h_fixed: 'ठीक और बेहतर हुआ', d_fixed: 'हर फ़िक्स और सुधार, जो ऐप में आ चुका है या अगले अपडेट में आ रहा है।',
       h_hot: 'हॉटफ़िक्स', d_hot: 'ज़रूरी फ़िक्स जो हम सामान्य अपडेट का इंतज़ार किए बिना जारी करते हैं।',
       h_known: 'ज्ञात समस्याएँ', d_known: 'जो हमें पता है कि अभी कच्चा है, और जहाँ तरीक़ा है वहाँ उसका उपाय भी।',
       h_up: 'आने वाला', d_up: 'ऐप किस तरफ़ जा रहा है। तारीख़ का वादा नहीं है, क्रम बदल सकता है।',
@@ -117,8 +117,8 @@
       if (!cards.length) return;
       n += cards.length;
       out += '<div class="iss-rel rv"><span class="iss-ver">v' + esc(r.v) + '</span>' +
-        '<span class="iss-chip live"><i></i>' + t('rel_status') + ' ' + esc(L(r.status)) + '</span>' +
-        '<span class="iss-chip mute">' + esc(r.date) + '</span>' +
+        '<span class="iss-chip ' + (r.next ? 'soon' : 'live') + '"><i></i>' + (r.next ? '' : t('rel_status') + ' ') + esc(L(r.status)) + '</span>' +
+        '<span class="iss-chip mute">' + esc(typeof r.date === 'object' ? L(r.date) : r.date) + '</span>' +
         '<span class="iss-chip mute">' + r.items.length + ' ' + t('items') + '</span></div>' +
         '<p class="iss-relnote rv">' + esc(L(r.note)) + '</p>' +
         '<div class="iss-grid iss-tl">' + cards.map(function (c) { return c.html; }).join('') + '</div>';
