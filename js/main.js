@@ -20,7 +20,7 @@
       eyebrow: 'Works fully offline on Android',
       h1a: 'Your hisaab,', h1b: 'sorted.',
       lead: 'Daily expenses and udhaar khata in one simple app. Everything stays on your phone. No account to create, no cloud to trust.',
-      play_get: 'Get it on Google Play', nav_join: 'Join', k_join: 'Join the testers', h_join: 'Help us test. <em>Get a certificate.</em>', p_join: 'Hisaab Kitaab is in closed testing on Google Play. Join the testers, use the app for a couple of weeks and tell us what to improve.', j1: 'Early access to the app on Google Play', j2: 'Your feedback shapes the next version', j3: 'A certificate of appreciation once the app is live', join_btn: 'Email me to join', join_note: 'Use the Google account (Gmail) you use on your Android phone. Your email is used only to add you to the test and to send your certificate.', tester_note: 'Testing invite: join first, then install.', tester_store: 'Already joined? Open in Play Store',
+      play_get: 'Get it on Google Play', nav_join: 'Join', k_join: 'Join the testers', h_join: 'Help us test. <em>Get a certificate.</em>', p_join: 'Hisaab Kitaab is in closed testing on Google Play. Join the testers, use the app for a couple of weeks and tell us what to improve.', j1: 'Early access to the app on Google Play', j2: 'Your feedback shapes the next version', j3: 'A certificate of appreciation once the app is live', join_btn: 'Request to join', f_name: 'Your name', f_email: 'Gmail / Google account email', f_sending: 'Sending...', f_ok: 'Thanks! Your request is in. We will add you to the test and email you the Play Store invite.', f_err: 'Could not send. Please use one of the options below.', f_bad: 'Please enter your name and a valid email.', f_alt: 'Form not working?', f_gmail: 'Write in Gmail', f_mail: 'Open mail app', f_copy: 'Copy email address', f_copied: 'Copied!', join_note: 'Use the Google account (Gmail) you use on your Android phone. Your email is used only to add you to the test and to send your certificate.', tester_note: 'Testing invite: join first, then install.', tester_store: 'Already joined? Open in Play Store',
       see: 'See what it does',
       tr1: 'No sign-up', tr2: 'No internet needed', tr3: 'No tracking',
       p_hi: 'Good evening', p_title: 'Hisaab Kitaab', p_spent: 'Spent this month', p_get: "You'll get", p_owe: 'You owe',
@@ -87,7 +87,7 @@
       eyebrow: 'Android पर पूरी तरह ऑफ़लाइन',
       h1a: 'आपका हिसाब,', h1b: 'एकदम सही।',
       lead: 'रोज़ के खर्च और उधार खाता, एक आसान ऐप में। सब कुछ आपके फ़ोन में रहता है। न अकाउंट बनाना, न किसी क्लाउड पर भरोसा।',
-      play_get: 'Google Play से पाएँ', nav_join: 'जुड़ें', k_join: 'टेस्टर बनें', h_join: 'टेस्ट में मदद करें। <em>सर्टिफ़िकेट पाएँ।</em>', p_join: 'हिसाब किताब अभी Google Play पर क्लोज़्ड टेस्टिंग में है। टेस्टर बनें, कुछ हफ़्ते ऐप इस्तेमाल करें और बताएँ क्या सुधारें।', j1: 'Google Play पर ऐप का अर्ली एक्सेस', j2: 'आपका फ़ीडबैक अगला वर्शन बनाता है', j3: 'ऐप लाइव होने पर प्रशंसा-पत्र (सर्टिफ़िकेट)', join_btn: 'जुड़ने के लिए ईमेल करें', join_note: 'अपने Android फ़ोन में इस्तेमाल होने वाला Google अकाउंट (Gmail) दें। आपका ईमेल सिर्फ़ टेस्ट में जोड़ने और सर्टिफ़िकेट भेजने के लिए इस्तेमाल होगा।', tester_note: 'टेस्टिंग इन्वाइट: पहले जुड़ें, फिर इंस्टॉल करें।', tester_store: 'पहले से जुड़ चुके हैं? Play Store में खोलें',
+      play_get: 'Google Play से पाएँ', nav_join: 'जुड़ें', k_join: 'टेस्टर बनें', h_join: 'टेस्ट में मदद करें। <em>सर्टिफ़िकेट पाएँ।</em>', p_join: 'हिसाब किताब अभी Google Play पर क्लोज़्ड टेस्टिंग में है। टेस्टर बनें, कुछ हफ़्ते ऐप इस्तेमाल करें और बताएँ क्या सुधारें।', j1: 'Google Play पर ऐप का अर्ली एक्सेस', j2: 'आपका फ़ीडबैक अगला वर्शन बनाता है', j3: 'ऐप लाइव होने पर प्रशंसा-पत्र (सर्टिफ़िकेट)', join_btn: 'जुड़ने का अनुरोध करें', f_name: 'आपका नाम', f_email: 'Gmail / Google अकाउंट ईमेल', f_sending: 'भेज रहे हैं...', f_ok: 'धन्यवाद! आपका अनुरोध मिल गया। हम आपको टेस्ट में जोड़कर Play Store का इन्वाइट ईमेल करेंगे।', f_err: 'भेज नहीं पाए। कृपया नीचे दिए किसी विकल्प का इस्तेमाल करें।', f_bad: 'कृपया अपना नाम और सही ईमेल लिखें।', f_alt: 'फ़ॉर्म नहीं चल रहा?', f_gmail: 'Gmail में लिखें', f_mail: 'मेल ऐप खोलें', f_copy: 'ईमेल एड्रेस कॉपी करें', f_copied: 'कॉपी हो गया!', join_note: 'अपने Android फ़ोन में इस्तेमाल होने वाला Google अकाउंट (Gmail) दें। आपका ईमेल सिर्फ़ टेस्ट में जोड़ने और सर्टिफ़िकेट भेजने के लिए इस्तेमाल होगा।', tester_note: 'टेस्टिंग इन्वाइट: पहले जुड़ें, फिर इंस्टॉल करें।', tester_store: 'पहले से जुड़ चुके हैं? Play Store में खोलें',
       see: 'देखें यह क्या करता है',
       tr1: 'कोई साइन-अप नहीं', tr2: 'इंटरनेट नहीं चाहिए', tr3: 'कोई ट्रैकिंग नहीं',
       p_hi: 'शुभ संध्या', p_title: 'हिसाब किताब', p_spent: 'इस महीने खर्च', p_get: 'मिलेंगे', p_owe: 'देने हैं',
@@ -168,6 +168,7 @@
     doc.lang = lang;
     doc.setAttribute('data-lang', lang);
     $$('[data-i18n]').forEach(function (el) { el.textContent = t(el.getAttribute('data-i18n')); });
+    $$('[data-i18n-ph]').forEach(function (el) { el.placeholder = t(el.getAttribute('data-i18n-ph')); });
     $$('[data-i18n-html]').forEach(function (el) { el.innerHTML = t(el.getAttribute('data-i18n-html')); });
     $('#langLabel').textContent = lang === 'en' ? 'हिं' : 'EN';
     renderHeroTx();
@@ -363,6 +364,41 @@
     leadDays = parseInt(b.getAttribute('data-n'), 10);
     $$('#leads button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
     renderRem();
+  });
+
+
+  /* ---------- join form ---------- */
+  var CONTACT = 'arun.idevs@gmail.com';
+  var subj = 'Join Hisaab Kitaab testers';
+  var bodyTxt = "Hi, I'd like to join the Hisaab Kitaab testing program.\n\nName:\nGoogle account email (the one used on my Android phone):\n";
+  var gm = $('#jGmail'), ml = $('#jMail');
+  if (gm) gm.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(CONTACT) + '&su=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(bodyTxt);
+  if (ml) ml.href = 'mailto:' + CONTACT + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(bodyTxt);
+  var cp = $('#jCopy');
+  if (cp) cp.addEventListener('click', function () {
+    var done = function () { var o = cp.textContent; cp.textContent = t('f_copied'); setTimeout(function () { cp.textContent = t('f_copy'); }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(CONTACT).then(done, function () { window.prompt('Email', CONTACT); });
+    else window.prompt('Email', CONTACT);
+  });
+  var jf = $('#joinForm');
+  if (jf) jf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var st = $('#jStatus'), btn = $('#jSend');
+    var name = $('#jName').value.trim(), email = $('#jEmail').value.trim();
+    if (jf.elements._honey.value) return;
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { st.className = 'jstatus bad'; st.textContent = t('f_bad'); return; }
+    st.className = 'jstatus'; st.textContent = t('f_sending'); btn.disabled = true;
+    fetch('https://formsubmit.co/ajax/' + CONTACT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, _subject: 'Hisaab Kitaab tester request', _template: 'table', _replyto: email, message: 'Tester request from the website. Name: ' + name + ', Google account email: ' + email })
+    }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (x) {
+        if (x.ok && String(x.d.success) !== 'false') { st.className = 'jstatus ok'; st.textContent = t('f_ok'); jf.reset(); }
+        else throw new Error('send failed');
+      })
+      .catch(function () { st.className = 'jstatus bad'; st.textContent = t('f_err'); })
+      .then(function () { btn.disabled = false; });
   });
 
   /* ---------- boot ---------- */

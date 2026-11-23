@@ -333,8 +333,17 @@
         </ul>
       </div>
       <div class="join-act">
-        <a class="btn" href="mailto:arun.idevs@gmail.com?subject=Join%20Hisaab%20Kitaab%20testers&body=Hi%2C%20I%27d%20like%20to%20join%20the%20Hisaab%20Kitaab%20testing%20program.%0A%0AName%3A%0AGoogle%20account%20email%20%28the%20one%20used%20on%20my%20Android%20phone%29%3A%0A"><svg class="ico"><use href="#i-arrow"/></svg><span data-i18n="join_btn">Email me to join</span></a>
+        <form id="joinForm" class="jform" novalidate>
+          <label class="sr" for="jName" data-i18n="f_name">Your name</label>
+          <input id="jName" name="name" type="text" autocomplete="name" maxlength="80" data-i18n-ph="f_name" placeholder="Your name" required>
+          <label class="sr" for="jEmail" data-i18n="f_email">Gmail / Google account email</label>
+          <input id="jEmail" name="email" type="email" autocomplete="email" maxlength="120" data-i18n-ph="f_email" placeholder="Gmail / Google account email" required>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <button class="btn" id="jSend" type="submit"><svg class="ico"><use href="#i-arrow"/></svg><span id="jSendTxt" data-i18n="join_btn">Request to join</span></button>
+          <p class="jstatus" id="jStatus" role="status" aria-live="polite"></p>
+        </form>
         <p class="join-note" data-i18n="join_note">Use the Google account (Gmail) you use on your Android phone. Your email is used only to add you to the test and to send your certificate.</p>
+        <p class="join-alt"><span data-i18n="f_alt">Form not working?</span> <a id="jGmail" href="#" target="_blank" rel="noopener" data-i18n="f_gmail">Write in Gmail</a> · <a id="jMail" href="#" data-i18n="f_mail">Open mail app</a> · <button type="button" id="jCopy" data-i18n="f_copy">Copy email address</button></p>
       </div>
     </div>
   </div>
