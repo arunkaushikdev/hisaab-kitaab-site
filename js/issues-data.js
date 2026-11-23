@@ -36,6 +36,10 @@ window.HK_ISSUES = {
           t: { en: "Date filters on a person's page", hi: 'व्यक्ति के पेज पर तारीख़ फ़िल्टर' },
           before: { en: 'Every entry was always shown, with no way to narrow by date.', hi: 'हमेशा सारी एंट्री दिखती थीं, तारीख़ से छाँटने का तरीक़ा नहीं था।' },
           now: { en: 'Pick All time, This month, Last month, Last 7 days, Today or a custom range. Totals follow the filter; the balance stays the full amount.', hi: 'सारा समय, इस महीने, पिछला महीना, 7 दिन, आज या कस्टम अवधि चुनें। टोटल फ़िल्टर के साथ बदलते हैं, बैलेंस पूरा ही रहता है।' } }
+        ,{ id: 'g6', tag: 'improved', area: 'Khata',
+          t: { en: 'Opening balance when creating a khata', hi: 'खाता बनाते समय शुरुआती बैलेंस' },
+          before: { en: 'A new khata always started at zero, so an old udhaar had to be added as a separate entry by hand.', hi: 'नया खाता हमेशा शून्य से शुरू होता था, पुराना उधार अलग से एंट्री बनाकर जोड़ना पड़ता था।' },
+          now: { en: 'Add an optional opening amount with You gave or You got. It becomes the first entry, which you can edit later.', hi: 'वैकल्पिक शुरुआती रक़म जोड़ें, आपने दिए या आपने लिए के साथ। वह पहली एंट्री बन जाती है, जिसे बाद में बदला जा सकता है।' } }
       ]
     },
     {
